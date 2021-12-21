@@ -1,0 +1,1 @@
+This calculator takes letter inputs, converts them to their numeric value based on their place in the alphabet and tells the user whether the sum is a prime number or not. Logic entirely processed in the front end. Includes basic validations and user-facing error handling. Uses some jquery for interface. To run, just pull the index.html file into your browser and away you go :)

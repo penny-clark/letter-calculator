@@ -1,12 +1,12 @@
 // USER INPUT PROCESSING FUNCTIONS------------------------------------------------------
 
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 // Function to check that input character is a letter
 const letterChecker = function(letter) {
-	const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const alphabetArray = alphabet.split('');
   let isLetter = false;
-  alphabetArray.forEach(element => {if (element === letter) isLetter = true});
+  if (alphabetArray.find(element => element === letter.toLowerCase())) isLetter = true;
 	return isLetter;
 }
 
@@ -32,7 +32,6 @@ const minLengthValidator = function(inputString) {
 
 // Function to convert input to corresponding numbers and add them up
 const stringSumTotal = function(letters) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   const lettersArr = letters.toLowerCase().split('');
   const numbers = lettersArr.map(x => alphabet.indexOf(x) + 1);
   let total = 0;
@@ -54,7 +53,6 @@ const isPrime = function(number) {
 
 //Shows the user the value of each letter they entered
 const stringSumDetailDisplay = function(letters) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   const lettersArr = letters.toLowerCase().split('');
   const numbers = lettersArr.map(x => alphabet.indexOf(x) + 1);
   $('.results-total').append(`${lettersArr[0]} = ${numbers[0]}`)
